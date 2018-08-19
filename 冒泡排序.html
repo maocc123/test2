@@ -1,0 +1,16 @@
+<!-- 上一个循环控制 第一个循环控制轮数 第二个逐个比较 -->
+<script type="text/javascript">
+	function bubbleSort(arr) {
+		for(var i=0;i<arr.length;i++){
+			for (var j=0; j<arr.length-1; j++){
+				if(arr[j]<arr[j+1]){
+					var temp=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp;
+				}
+			}
+		}
+		return arr;
+	}
+	console.log(bubbleSort([1,6,7,3,4]))
+</script>

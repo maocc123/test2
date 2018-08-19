@@ -1,0 +1,20 @@
+<!-- 地址的排序 先确定第一位 再第二位。。。。。。。。。 O(n^2) -->
+<script type="text/javascript">
+	function selectSort(arr) {
+		for(var i=0;i<arr.length-1;i++){
+			var indexMin=i;
+			for(var j=i; j<arr.length;j++){   //注意开始位置
+				if(arr[j]<arr[indexMin]){
+					indexMin=j;
+				}
+			}
+			if(i!==indexMin){
+				var temp=arr[i];
+				arr[i]=arr[indexMin];
+				arr[indexMin]=temp;	
+			}
+		}
+		return arr;
+	}
+	console.log(selectSort([1,5,3,2,7]))
+</script>
